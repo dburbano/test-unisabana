@@ -22,8 +22,19 @@ jobs:
             whoami
             ls -all
             pwd
-            echo "-----------------"
+            echo "------- Etapa 2 ----------"
             ./ejercicio/uno/ejemplo.sh
+
+  build3:
+    docker:
+      - image: cimg/base:2021.04
+    steps:
+       - checkout
+       - run:
+          name: "Other commands"
+          command: |
+            echo "----- Etapa 3 ------------"
+            echo "Ejecutando etapa 3"
 
 workflows:
   version: 2
@@ -34,4 +45,13 @@ workflows:
           filters:
             branches:
               only: dev
+      - un-momento:
+          type: approval
+          requires:
+            - build
+      - build3:
+          requires:
+            - build2
+            - un-momento
           
+
