@@ -19,7 +19,7 @@ jobs:
           name: "Other commands"
           command: |
             whoami
-            ls /
+            ls -all
             pwd
             echo "-----------------"
             ./ejercicio/uno/ejemplo.sh
