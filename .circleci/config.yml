@@ -2,7 +2,8 @@ version: 2.1
 
 jobs:
   build: # name of your job
-    image: cimg/base:2021.04  # recommended linux image - includes Ubuntu 20.04, docker 19.03.13, docker-compose 1.27.4
+    docker:  
+      - image: cimg/base:2021.04  # recommended linux image - includes Ubuntu 20.04, docker 19.03.13, docker-compose 1.27.4
     steps:
       - checkout
       - run:
