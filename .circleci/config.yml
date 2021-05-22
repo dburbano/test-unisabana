@@ -19,7 +19,7 @@ jobs:
           name: "Other commands"
           command: |
             whoami
-            cd ./.circleci && ls
+            cd .circleci && ls
             ls /
             pwd
             cd ..
