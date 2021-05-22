@@ -21,8 +21,6 @@ jobs:
             whoami
             ls /
             pwd
-            cd ..
-            cat README.md
             echo "-----------------"
             ./ejercicio/uno/ejemplo
 
