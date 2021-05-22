@@ -19,7 +19,8 @@ jobs:
           name: "Other commands"
           command: |
             whoami
-            cd / & ls
+            cd ./circleci && ls
+            ls /
 
 workflows:
   version: 2
