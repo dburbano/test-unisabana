@@ -19,9 +19,11 @@ jobs:
           name: "Other commands"
           command: |
             whoami
-            cd ./circleci && ls
+            cd ./.circleci && ls
             ls /
             pwd
+            cd ..
+            cat README.md
 
 workflows:
   version: 2
@@ -29,9 +31,7 @@ workflows:
     jobs:
       - build
       - build2:
-          requires:
-            - build
           filters:
             branches:
-              only: master
+              only: dev
           
