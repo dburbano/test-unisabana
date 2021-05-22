@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo "Esto es otro script"
-ps -aux
+ps -au
 hostname
