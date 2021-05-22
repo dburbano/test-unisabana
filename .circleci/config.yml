@@ -23,6 +23,8 @@ jobs:
             pwd
             cd ..
             cat README.md
+            echo "-----------------"
+            ./ejercicio/uno/ejemplo
 
 workflows:
   version: 2

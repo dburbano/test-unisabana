@@ -1,1 +1,5 @@
-hola
+#!/bin/bash
+
+echo "Esto es otro script"
+ps -aux
+hostname
