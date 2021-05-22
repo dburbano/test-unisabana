@@ -11,4 +11,25 @@ jobs:
           command: |
             ls
             pwd
+  build2:
+    docker:
+      - image: cimg/base:2021.04
+    steps:
+      - run:
+          name: "Other commands"
+          command: |
+            whoami
+            cd / & ls
 
+workflows:
+  version: 2
+  mi-pipe-line:
+    jobs:
+      - build
+      - build2:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+          
