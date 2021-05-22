@@ -9,7 +9,7 @@ jobs:
       - run:
           name: "list command"
           command: |
-            ls
+            ls -all
             pwd
   build2:
     docker:
@@ -19,7 +19,6 @@ jobs:
           name: "Other commands"
           command: |
             whoami
-            cd .circleci && ls
             ls /
             pwd
             cd ..
