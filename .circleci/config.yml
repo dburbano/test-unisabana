@@ -38,20 +38,22 @@ jobs:
 
 workflows:
   version: 2
-  mi-pipe-line:
+  unisabana-pipe:
     jobs:
       - build
       - build2:
+          requires:
+            - build
           filters:
             branches:
               only: dev
-      - un-momento:
+      - antes-de-despliegue:
           type: approval
           requires:
-            - build
+            - build2
       - build3:
           requires:
-            - build2
-            - un-momento
+            - build
+            - antes-de-despliegue
           
 
