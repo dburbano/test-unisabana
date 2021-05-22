@@ -22,7 +22,7 @@ jobs:
             ls /
             pwd
             echo "-----------------"
-            ./ejercicio/uno/ejemplo
+            ./ejercicio/uno/ejemplo.sh
 
 workflows:
   version: 2
